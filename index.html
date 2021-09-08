@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>どこでもマド</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    
+
+
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs="debugUIEnabled:false;">
+        <a-entity camera></a-entity>
+
+        
+        <a-marker preset= "custom" type="pattern" url="img/pattern-wherever.patt">
+
+            
+            <a-entity rotation="-90 0 0" geometry="primitive:plane;width:1.6;height:2.32;" material="shader:gif;src:url(img/keshiki.gif);" gif="" transparent="true"></a-entity>
+            
+        </a-marker>
+        
+
+    </a-scene>
+    <p style="background-color: white; font-size: 10%; font-weight: bold; position: absolute; top: 1px; left: 1px;">
+        QRコードをかざしてください
+    </p>
+    <p style="background-color: white; font-size: 10%; font-weight: bold; position: absolute; top: 1px; right: 1px; white-space: pre-line;">反応しない場合は数秒間待ってから
+        20cm程 離して読み取ってください
+    </p>
+</body>
+
+</html>
